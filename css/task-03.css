@@ -1,0 +1,24 @@
+.thmb {
+  max-width: 1200px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery {
+  display: flex;
+  /* Make a flex container multiline */
+  /*flex-wrap: wrap;*/
+  /* Set gap between rows and columns */
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery_item {
+  flex-basis: calc((100% - 20px) / 3);
+  padding: 10px;
+}
+
+.gallery img {
+  display: block;
+}

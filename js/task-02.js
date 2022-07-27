@@ -17,4 +17,5 @@ const createList = ingredients.map((value) => {
   return item;
 });
 
+console.log(createList);
 refList.append(...createList);
