@@ -26,5 +26,4 @@ const tegString = images.map(makeTagString).join("");
 listRef.insertAdjacentHTML("afterbegin", `${tegString}`);
 
 const itemRef = listRef.querySelectorAll("li");
-
 itemRef.forEach((item) => item.classList.add("gallery_item"));
