@@ -17,7 +17,7 @@ const listRef = document.querySelector(".gallery");
 
 listRef.style.listStyle = "none";
 
-const makeTagString = (obj) => {
+/*const makeTagString = (obj) => {
   const string = `<li><img src = '${obj.url}' alt = '${obj.alt}'></li>`;
   return string;
 };
@@ -26,4 +26,12 @@ const tegString = images.map(makeTagString).join("");
 listRef.insertAdjacentHTML("afterbegin", `${tegString}`);
 
 const itemRef = listRef.querySelectorAll("li");
-itemRef.forEach((item) => item.classList.add("gallery_item"));
+itemRef.forEach((item) => item.classList.add("gallery_item"));*/
+
+const makeTagString = (obj) => {
+  const string = `<li  class = 'gallery_item'><img src = '${obj.url}' alt = '${obj.alt}'></li>`;
+  return string;
+};
+
+const tegString = images.map(makeTagString).join("");
+listRef.insertAdjacentHTML("afterbegin", tegString);

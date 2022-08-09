@@ -13,7 +13,7 @@ const formRef = document.querySelector(".login-form");
 
 const submitHandler = (eventObj) => {
   eventObj.preventDefault();
-  console.log(eventObj.currentTarget);
+  //console.log(eventObj.currentTarget);
 
   //деструктуризуємо властивість elements обєкта form (його повертає eventObj.currentTarget)
   //властивість elements в свою чергу являється обєктом із влаcтивостями email i password
@@ -21,10 +21,14 @@ const submitHandler = (eventObj) => {
     elements: { email, password },
   } = eventObj.currentTarget;
 
+  const valueObj = { email: email.value, password: password.value };
+
   if (email.value === "" || password.value === "") {
     alert("Please fill in all the fields!");
+    return;
   }
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+
+  console.log(valueObj);
   eventObj.currentTarget.reset();
 };
 

@@ -6,13 +6,13 @@ function getRandomHexColor() {
 на button.change-color і виводить значення кольору в span.color.
 */
 
-const bodyRef = document.querySelector("body");
 const colorSpanRef = document.querySelector(".color");
 const changeColorButton = document.querySelector(".change-color");
 
 const changeColorButtonHandler = () => {
   const color = getRandomHexColor();
-  bodyRef.setAttribute("style", `background-color: ${color}`);
+  document.body.style.backgroundColor = color;
+
   colorSpanRef.textContent = `${color}`;
 };
 
